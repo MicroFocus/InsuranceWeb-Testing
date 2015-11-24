@@ -12,7 +12,6 @@
 	
 ## License
 Scripts provided by Micro Focus are licensed under the [MIT license](LICENSE).
-Scripts provided by other contributors are licensed under the [MIT license](LICENSE) unless stated otherwise.
 
 ## Contribution
 You want to contribute to our sample scripts? Great!
