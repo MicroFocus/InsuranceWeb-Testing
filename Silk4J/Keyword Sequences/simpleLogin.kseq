@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <Argument name="username" />
+    <Argument name="password" />
+    <InvokeKeyword group="API" name="setText">
+        <Argument value="Web.Login.EMail" />
+        <Argument value="${username}" />
+    </InvokeKeyword>
+    <InvokeKeyword group="API" name="setText">
+        <Argument value="Web.Login.Password" />
+        <Argument value="${password}" />
+    </InvokeKeyword>
+    <InvokeKeyword group="API" name="click">
+        <Argument value="Web.Login.Login" />
+    </InvokeKeyword>
+</Keyword>

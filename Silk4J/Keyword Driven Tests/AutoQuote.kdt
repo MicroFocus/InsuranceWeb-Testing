@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyword xmlns="http://www.borland.com/silk/Keyword">
-    <InvokeKeyword name="startBrowser" id="" />
-    <InvokeKeyword name="Login" id="">
+    <InvokeKeyword name="start Browser" id="" />
+    <InvokeKeyword name="login" id="">
         <Argument value="john.smith@gmail.com" />
         <Argument value="john" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Validate" id="">
+    <InvokeKeyword group="API" name="validate" id="">
         <Argument value="Web.UserName" />
         <Argument value="text" />
         <Argument value="John Smith" />
     </InvokeKeyword>
-    <InvokeKeyword name="Select a Service" id="">
+    <InvokeKeyword name="select a Service" id="">
         <Argument value="Auto Quote" />
     </InvokeKeyword>
     <InvokeKeyword name="fill out user contact data" id="">
@@ -29,5 +29,5 @@
         <Argument value="Electra" />
         <Argument value="OWN" />
     </InvokeKeyword>
-    <InvokeKeyword name="Logout" id="" />
+    <InvokeKeyword name="logout" id="" />
 </Keyword>

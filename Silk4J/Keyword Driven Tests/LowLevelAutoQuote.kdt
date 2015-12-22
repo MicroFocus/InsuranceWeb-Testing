@@ -1,77 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Keyword xmlns="http://www.borland.com/silk/Keyword">
-    <InvokeKeyword name="startBrowser">
+    <InvokeKeyword name="start Browser">
         <Argument value="${result}" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.Login.EMail" />
         <Argument value="john.smith@gmail.com" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.Login.Password" />
         <Argument value="john" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.Login.Login" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Validate">
+    <InvokeKeyword group="API" name="validate">
         <Argument value="Web.//LABEL[@class='login' and @for='logout-form']" />
         <Argument value="text" />
         <Argument value="John Smith" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.//INPUT[@id='logout-form:logout']" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Select">
+    <InvokeKeyword group="API" name="select">
         <Argument value="Web.QuickJump" />
         <Argument value="Auto Quote" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.AutoQuote.ZipCode" />
         <Argument value="4040" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.AutoQuote.EMail" />
         <Argument value="john.smith@gmail.com" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.Vehicle.Car" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.Next" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.AutoQuote.Age" />
         <Argument value="30" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.Gender.Female" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.DrivingRecord.//INPUT[@id='autoquote:type:1']" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.Next" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="SetText">
+    <InvokeKeyword group="API" name="setText">
         <Argument value="Web.AutoQuote.//INPUT[@id='autoquote:year']" />
         <Argument value="2012" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Select">
+    <InvokeKeyword group="API" name="select">
         <Argument value="Web.AutoQuote.Make" />
         <Argument value="Buick" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Select">
+    <InvokeKeyword group="API" name="select">
         <Argument value="Web.AutoQuote.Model" />
         <Argument value="Electra" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.//INPUT[@id='autoquote:finInfo:0']" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Click">
+    <InvokeKeyword group="API" name="click">
         <Argument value="Web.AutoQuote.Next" />
     </InvokeKeyword>
-    <InvokeKeyword group="API" name="Validate">
+    <InvokeKeyword group="API" name="validate">
         <Argument value="Web.//FORM[@id='quote-result']//H1/B" />
         <Argument value="text" />
         <Argument value="USD 1.290,00" />
