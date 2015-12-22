@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorderProject version="16.5">
+  <applicationConfiguration>
+    <moduleNamePattern>*\IEXPLORE.EXE</moduleNamePattern>
+    <mobileDeviceName>Nexus 7</mobileDeviceName>
+    <browserType>InternetExplorer</browserType>
+    <baseStateInfo>
+      <locator>//BrowserApplication</locator>
+      <url>http://localhost:9090/InsuranceWebExtJS/</url>
+    </baseStateInfo>
+  </applicationConfiguration>
+  <agentOptions>
+    <entry>
+      <string>OPT_RECORD_OBJECTMAPS_MODE</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>OPT_ASSET_NAMESPACE</string>
+      <string>InsuranceWeb</string>
+    </entry>
+  </agentOptions>
+</recorderProject>
