@@ -102,7 +102,7 @@ public class Keywords {
         browserWindow.DomRadioButton("Truck").Select();
         break;
     }
-    browserWindow.DomButton("autoquote next").Click(MouseButton.Left, new Point(25, 7));
+    browserWindow.DomButton("autoquote next").Click();
   }
 
   [Keyword("Fill out user details")]
@@ -148,7 +148,7 @@ public class Keywords {
 
     (browserWindow.Find(string.Format("//div[@textContents='{0}']", make)) as DomElement).Click();
 
-    browserWindow.DomElement("data image gif;base62").Click(MouseButton.Left, new Point(6, 15));
+    browserWindow.DomElement("data image gif;base62").Click();
 
     (browserWindow.Find(string.Format("//div[@textContents='{0}']", type)) as DomElement).Click();
 
@@ -164,7 +164,7 @@ public class Keywords {
         break;
     }
 
-    browserWindow.DomButton("autoquote next").Click(MouseButton.Left, new Point(40, 11));
+    browserWindow.DomButton("autoquote next").Click();
   }
 
 }
