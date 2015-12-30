@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <InvokeKeyword name="Start application" />
+    <InvokeKeyword name="Login as default user" />
+    <InvokeKeyword name="Select a service">
+        <Argument value="Auto Quote" />
+    </InvokeKeyword>
+    <InvokeKeyword name="Walk through auto quote workflow" />
+    <InvokeKeyword name="Logout" />
+</Keyword>

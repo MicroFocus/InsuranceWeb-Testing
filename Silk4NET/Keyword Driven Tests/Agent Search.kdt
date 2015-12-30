@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <InvokeKeyword name="Start application" />
+    <InvokeKeyword name="Login as default user" />
+    <InvokeKeyword name="Select a service">
+        <Argument value="Agent Lookup" />
+    </InvokeKeyword>
+    <InvokeKeyword name="Search for all agents" />
+    <InvokeKeyword name="Validate that Agent Walker exists" />
+    <InvokeKeyword name="Logout" />
+</Keyword>

@@ -1,0 +1,6 @@
+*.xlg
+*.sou
+*.vs
+bin
+obj
+TestResults

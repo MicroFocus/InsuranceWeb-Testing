@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <InvokeKeyword name="Fill out user contact data">
+        <Argument value="4040" />
+        <Argument value="john.smith@gmail.com" />
+        <Argument value="CAR" />
+    </InvokeKeyword>
+    <InvokeKeyword name="Fill out user details">
+        <Argument value="30" />
+        <Argument value="MALE" />
+        <Argument value="GOOD" />
+    </InvokeKeyword>
+    <InvokeKeyword name="Fill out car details">
+        <Argument value="2012" />
+        <Argument value="Buick" />
+        <Argument value="Electra" />
+        <Argument value="OWN" />
+    </InvokeKeyword>
+</Keyword>

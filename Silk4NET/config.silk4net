@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recorderProject version="16.5">
+  <applicationConfiguration>
+    <browserType>Firefox</browserType>
+    <baseStateInfo>
+      <locator>//BrowserApplication</locator>
+      <url>http://demo.borland.com/InsuranceWebExtJS</url>
+    </baseStateInfo>
+  </applicationConfiguration>
+  <agentOptions/>
+</recorderProject>
