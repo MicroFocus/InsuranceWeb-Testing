@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <InvokeKeyword name="Go to home page" />
+    <InvokeKeyword name="Logout" />
+</Keyword>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Keyword xmlns="http://www.borland.com/silk/Keyword">
+    <Argument name="userName" />
+    <Argument name="password" />
+    <InvokeKeyword name="DefaultBaseState" />
+    <InvokeKeyword name="Login">
+        <Argument value="${userName}" />
+        <Argument value="${password}" />
+    </InvokeKeyword>
+</Keyword>

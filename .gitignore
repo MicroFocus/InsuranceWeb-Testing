@@ -1,1 +1,6 @@
 *.xlg
+*.res
+*.ino
+*.in_
+*.to
+*.t_

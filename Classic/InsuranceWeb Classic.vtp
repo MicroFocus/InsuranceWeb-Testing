@@ -1,0 +1,36 @@
+﻿
+[SystemSettings]
+Version=17.0
+Description=
+
+[ProjectProfile]
+AccexIni=extend\accex.ini
+AttributesIni=extend\attributes.ini
+AxextIni=extend\axext.ini
+DomexIni=extend\domex.ini
+JavaexIni=extend\javaex.ini
+ProjectIni=InsuranceWeb Classic.ini
+EndFolder=TRUE
+[ProjectFrame]
+Source=frame.inc
+EndFolder=TRUE
+[ProjectKeywordTests]
+Source=AgentLookup.kdt
+Source=AutoQuote.kdt
+EndFolder=TRUE
+[ProjectScript]
+Source=keywords.t
+EndFolder=TRUE
+[ProjectKeywords]
+Source=Go to home page and logout.kseq
+Source=Start application and login.kseq
+EndFolder=TRUE
+[ProjectPlan]
+EndFolder=TRUE
+[ProjectResults]
+EndFolder=TRUE
+[ProjectData]
+EndFolder=TRUE
+[GlobalTVSettings]
+ShowFullPath=FALSE
+ShowDateTime=FALSE
