@@ -10,4 +10,5 @@
     <InvokeKeyword name="Fill in car data" />
     <InvokeKeyword name="Validate quote" />
     <InvokeKeyword name="Go to home page and logout" />
+    <InvokeKeyword name="Close application" />
 </Keyword>

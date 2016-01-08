@@ -60,4 +60,5 @@
 			[-] {...}
 					[ ] {"Text",		"Walker"}
 	[ ] 
-[ ] 
+[-] keyword void CloseApplication() alias "Close application"
+	[ ] WebBrowser.Close()
