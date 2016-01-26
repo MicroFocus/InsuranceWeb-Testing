@@ -8,163 +8,160 @@ using Silk.KeywordDriven;
 using SilkTest.Ntf.XBrowser;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-public class Keywords {
-  public enum VehicleType {
-    CAR, TRUCK
-  }
-  public enum Gender {
-    MALE, FEMALE
-  }
-  public enum DrivingRecord {
-    EXCELLENT, GOOD, FAIR, POOR
-  }
-  public enum FinancialInfo {
-    OWN, FINANCED, LEASE
-  }
-
-  private readonly Desktop _desktop = Agent.Desktop;
-
-  [Keyword("Start application", IsBaseState = true)]
-  public void Start_application() {
-    // Go to web page 'demo.borland.com/InsuranceWebExtJS'
-    BrowserBaseState baseState = new BrowserBaseState();
-    baseState.Execute();
-  }
-
-  [Keyword]
-  public void Login(string email, string password) {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomTextField("login-form email").Click();
-    browserWindow.DomTextField("login-form email").SetText(email);
-    browserWindow.DomTextField("login-form password").Click();
-    browserWindow.DomTextField("login-form password").SetText(password);
-    browserWindow.DomButton("login-form login").Click();
-  }
-
-  [Keyword("Login as default user")]
-  public void SimpleLogin() {
-    Login("john.smith@gmail.com", "john");
-  }
-
-  [Keyword("Select a service")]
-  public void Select_a_service(string service) {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomListBox("quick-link jump-menu").Select(service);
-  }
-
-  [Keyword("Search for all agents")]
-  public void Search_for_all_agents() {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomButton("show-all search-all").Click();
-  }
-
-  [Keyword("Validate that Agent Walker exists")]
-  public void Validate_that_Agent_Walker_exists() {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    Assert.AreEqual("Walker", browserWindow.DomElement("Walker").Text);
-  }
-
-  [Keyword]
-  public void Logout() {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    var homeLink = webBrowser.Find("BrowserWindow.http   demo borland com InsuranceWebExtJS index jsf", new FindOptions(false)) as DomLink;
-
-    if (homeLink != null) {
-      homeLink.Select();
+public class Keywords
+{
+    public enum VehicleType
+    {
+        CAR, TRUCK
+    }
+    public enum Gender
+    {
+        MALE, FEMALE
+    }
+    public enum DrivingRecord
+    {
+        EXCELLENT, GOOD, FAIR, POOR
+    }
+    public enum FinancialInfo
+    {
+        OWN, FINANCED, LEASE
     }
 
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomButton("logout-form logout").Click();
-  }
+    private readonly Desktop _desktop = Agent.Desktop;
 
-  [Keyword("Fill out user contact data")]
-  public void Fill_out_user_contact_data(string zipCode, string email, VehicleType type) {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomTextField("autoquote zipcode").SetText(zipCode);
-    browserWindow.DomTextField("autoquote e-mail").SetText(email);
-
-    switch (type) {
-      case VehicleType.CAR:
-        browserWindow.DomRadioButton("Car").Select();
-        break;
-      case VehicleType.TRUCK:
-        browserWindow.DomRadioButton("Truck").Select();
-        break;
-    }
-    browserWindow.DomButton("autoquote next").Click();
-  }
-
-  [Keyword("Fill out user details")]
-  public void Fill_out_user_details(int age, Gender gender, DrivingRecord drivingRecord) {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomTextField("autoquote age").SetText(age.ToString());
-    switch (gender) {
-      case Gender.MALE:
-        browserWindow.DomElement("Male").Click();
-        break;
-      case Gender.FEMALE:
-        browserWindow.DomElement("Female").Click();
-        break;
+    [Keyword("Start application", IsBaseState = true)]
+    public void Start_application()
+    {
+        // Go to web page 'demo.borland.com/InsuranceWebExtJS'
+        BrowserBaseState baseState = new BrowserBaseState();
+        baseState.Execute();
     }
 
-    switch (drivingRecord) {
-      case DrivingRecord.EXCELLENT:
-        browserWindow.DomElement("Excellent").Click();
-        break;
-      case DrivingRecord.GOOD:
-        browserWindow.DomElement("Good").Click();
-        break;
-      case DrivingRecord.FAIR:
-        browserWindow.DomElement("Fair").Click();
-        break;
-      case DrivingRecord.POOR:
-        browserWindow.DomElement("Poor").Click();
-        break;
+    [Keyword]
+    public void Login(string email, string password)
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomTextField("Login.EMail").SetText(email);
+        browserWindow.DomTextField("Login.Password").SetText(password);
+        browserWindow.DomButton("Login.Login").Click();
     }
 
-    browserWindow.DomButton("autoquote next").Click();
-  }
-
-  [Keyword("Fill out car details")]
-  public void Fill_out_car_details(int year, string make, string type, FinancialInfo financialInfo) {
-    BrowserApplication webBrowser = _desktop.BrowserApplication("demo_borland_com");
-
-    BrowserWindow browserWindow = webBrowser.BrowserWindow("BrowserWindow");
-    browserWindow.DomTextField("autoquote year").SetText(year.ToString());
-    browserWindow.DomElement("data image gif;base6").Click();
-
-    (browserWindow.Find(string.Format("//div[@textContents='{0}']", make)) as DomElement).Click();
-
-    browserWindow.DomElement("data image gif;base62").Click();
-
-    (browserWindow.Find(string.Format("//div[@textContents='{0}']", type)) as DomElement).Click();
-
-    switch (financialInfo) {
-      case FinancialInfo.OWN:
-        browserWindow.DomRadioButton("Own").Select();
-        break;
-      case FinancialInfo.FINANCED:
-        browserWindow.DomRadioButton("Financed").Select();
-        break;
-      case FinancialInfo.LEASE:
-        browserWindow.DomRadioButton("Lease").Select();
-        break;
+    [Keyword("Login as default user")]
+    public void SimpleLogin()
+    {
+        Login("john.smith@gmail.com", "john");
     }
 
-    browserWindow.DomButton("autoquote next").Click();
-  }
+    [Keyword("Select a service")]
+    public void Select_a_service(string service)
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomListBox("QuickJump").Select(service);
+    }
+
+    [Keyword("Search for all agents")]
+    public void Search_for_all_agents()
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomButton("SearchAll").Click();
+    }
+
+    [Keyword("Validate that Agent Walker exists")]
+    public void Validate_that_Agent_Walker_exists()
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        TestObject walker = browserWindow.Find("//DIV[@textContents='Walker']", new FindOptions(false, 5000));
+        Assert.IsNotNull(walker);
+    }
+
+    [Keyword]
+    public void Logout()
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomLink("Home").Select();
+        browserWindow.DomButton("Logout").Click();
+    }
+
+    [Keyword("Fill out user contact data")]
+    public void Fill_out_user_contact_data(string zipCode, string email, VehicleType type)
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomTextField("AutoQuote.ZipCode").SetText(zipCode);
+        browserWindow.DomTextField("AutoQuote.EMail").SetText(email);
+
+        switch (type)
+        {
+            case VehicleType.CAR:
+                browserWindow.DomRadioButton("AutoQuote.Vehicle.Car").Select();
+                break;
+            case VehicleType.TRUCK:
+                browserWindow.DomRadioButton("AutoQuote.Vehicle.Truck").Select();
+                break;
+        }
+        browserWindow.DomButton("AutoQuote.Next").Click();
+    }
+
+    [Keyword("Fill out user details")]
+    public void Fill_out_user_details(int age, Gender gender, DrivingRecord drivingRecord)
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomTextField("AutoQuote.Age").SetText(age.ToString());
+        switch (gender)
+        {
+            case Gender.MALE:
+                browserWindow.DomElement("AutoQuote.Gender.Male").Click();
+                break;
+            case Gender.FEMALE:
+                browserWindow.DomElement("AutoQuote.Gender.Female").Click();
+                break;
+        }
+
+        switch (drivingRecord)
+        {
+            case DrivingRecord.EXCELLENT:
+                browserWindow.DomElement("//INPUT[@id='autoquote:type:0']").Click();
+                break;
+            case DrivingRecord.GOOD:
+                browserWindow.DomElement("//INPUT[@id='autoquote:type:1']").Click();
+                break;
+            case DrivingRecord.FAIR:
+                browserWindow.DomElement("//INPUT[@id='autoquote:type:2']").Click();
+                break;
+            case DrivingRecord.POOR:
+                browserWindow.DomElement("//INPUT[@id='autoquote:type:3']").Click();
+                break;
+        }
+
+        browserWindow.DomButton("AutoQuote.Next").Click();
+    }
+
+    [Keyword("Fill out car details")]
+    public void Fill_out_car_details(int year, string make, string type, FinancialInfo financialInfo)
+    {
+        BrowserWindow browserWindow = _desktop.BrowserWindow("Web");
+        browserWindow.DomTextField("//INPUT[@id='autoquote:year']").SetText(year.ToString());
+        
+      
+		browserWindow.DomElement("//IMG[@class='x-form-trigger x-for*']").DomClick();
+		(browserWindow.Find(string.Format("//div[@textContents='{0}']", make)) as DomElement).Click();
+
+		browserWindow.DomElement("//IMG[@class='x-form-trigger x-for*'][2]").DomClick();
+		(browserWindow.Find(string.Format("//div[@textContents='{0}']", type)) as DomElement).Click();
+		
+        switch (financialInfo)
+        {
+            case FinancialInfo.OWN:
+                browserWindow.DomRadioButton("//INPUT[@id='autoquote:finInfo:0']").Select();
+                break;
+            case FinancialInfo.FINANCED:
+                browserWindow.DomRadioButton("//INPUT[@id='autoquote:finInfo:1']").Select();
+                break;
+            case FinancialInfo.LEASE:
+                browserWindow.DomRadioButton("//INPUT[@id='autoquote:finInfo:2']").Select();
+                break;
+        }
+
+        browserWindow.DomButton("AutoQuote.Next").Click();
+    }
 
 }

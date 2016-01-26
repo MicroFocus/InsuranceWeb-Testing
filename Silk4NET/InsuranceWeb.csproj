@@ -57,9 +57,6 @@
     <EmbeddedResource Include="config.silk4net" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Object Maps\demo_borland_com.objectmap" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Keyword Driven Tests\Agent Search.kdt" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +69,9 @@
     <EmbeddedResource Include="Keyword Driven Tests\Low level test.kdt">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Object Maps\InsuranceWeb.objectmap" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

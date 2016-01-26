@@ -17,7 +17,7 @@
         <Argument value="Auto Quote" />
     </InvokeKeyword>
     <InvokeKeyword name="Click">
-        <Argument value="//A[@href='http://demo.borland.com/InsuranceWebExtJS/index.jsf']" />
+        <Argument value="//A[@textContents='Home']" />
     </InvokeKeyword>
     <InvokeKeyword name="Click">
         <Argument value="//input[@id='logout-form:logout']" />

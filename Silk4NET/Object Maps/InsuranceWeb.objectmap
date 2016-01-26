@@ -1,0 +1,32 @@
+<ObjectMap version="1">
+  <ObjectMapEntry id="Web" locator="//BrowserApplication//BrowserWindow" urlPattern="*demo.borland.com*">
+    <ObjectMapEntry id="AutoQuote" locator="//FORM[@id='autoquote']">
+      <ObjectMapEntry id="Age" locator="//INPUT[@id='autoquote:age']" />
+      <ObjectMapEntry id="DrivingRecord" locator="//TABLE[@id='autoquote:type']" />
+      <ObjectMapEntry id="EMail" locator="//INPUT[@id='autoquote:e-mail']" />
+      <ObjectMapEntry id="Gender" locator="//TABLE[@id='autoquote:gender']">
+        <ObjectMapEntry id="Female" locator="//INPUT[@id='autoquote:gender:0']" />
+        <ObjectMapEntry id="Male" locator="//INPUT[@id='autoquote:gender:1']" />
+      </ObjectMapEntry>
+      <ObjectMapEntry id="Make" locator="//INPUT[@id='makeCombo']" />
+      <ObjectMapEntry id="Model" locator="//INPUT[@id='modelCombo']" />
+      <ObjectMapEntry id="Next" locator="//INPUT[@id='autoquote:next']" />
+      <ObjectMapEntry id="Vehicle" locator="//TABLE[@id='autoquote:vehicle']">
+        <ObjectMapEntry id="Car" locator="//INPUT[@id='autoquote:vehicle:0']" />
+        <ObjectMapEntry id="Truck" locator="//INPUT[@id='autoquote:vehicle:1']" />
+      </ObjectMapEntry>
+      <ObjectMapEntry id="ZipCode" locator="//INPUT[@id='autoquote:zipcode']" />
+    </ObjectMapEntry>
+    <ObjectMapEntry id="AutoQuoteResult" locator="//FORM[@id='quote-result']" />
+    <ObjectMapEntry id="Home" locator="//A[@textContents='Home']" />
+    <ObjectMapEntry id="Login" locator="//FORM[@id='login-form']">
+      <ObjectMapEntry id="EMail" locator="//INPUT[@id='login-form:email']" />
+      <ObjectMapEntry id="Login" locator="//INPUT[@id='login-form:login']" />
+      <ObjectMapEntry id="Password" locator="//INPUT[@id='login-form:password']" />
+    </ObjectMapEntry>
+    <ObjectMapEntry id="Logout" locator="//INPUT[@id='logout-form:logout']" />
+    <ObjectMapEntry id="QuickJump" locator="//SELECT[@id='quick-link:jump-menu']" />
+    <ObjectMapEntry id="SearchAll" locator="//INPUT[@id='show-all:search-all']" />
+    <ObjectMapEntry id="UserName" locator="//FORM[@id='logout-form']//LABEL" />
+  </ObjectMapEntry>
+</ObjectMap>
