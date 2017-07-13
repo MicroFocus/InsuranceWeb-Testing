@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recorderProject version="16.5">
+<recorderProject version="18.0">
   <applicationConfiguration>
-    <moduleNamePattern>*\IEXPLORE.EXE</moduleNamePattern>
-    <mobileDeviceName>Nexus 7</mobileDeviceName>
     <browserType>InternetExplorer</browserType>
     <baseStateInfo>
       <locator>//BrowserApplication</locator>
